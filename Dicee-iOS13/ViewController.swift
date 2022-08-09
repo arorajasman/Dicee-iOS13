@@ -36,9 +36,10 @@ class ViewController: UIViewController {
     // value of left dice when the roll button is pressed
     var leftDiceNumber = 0
     
+    
     // the code below is to use the var keyword for creating a variable for getting the
     // value of the right dice when the roll button is pressed
-    var rightDiceNumber = 5
+    var rightDiceNumber = 0
     
     
     // the below method will work when when the view or ui loads
@@ -106,14 +107,30 @@ class ViewController: UIViewController {
 //        leftDiceNumber = leftDiceNumber + 1
         
         // the above line of code can also be written using the shorthand operator
-        leftDiceNumber += 1
+//        leftDiceNumber += 1
         
         // the code below is used to decrease the value of rightDiceNumber by 1
 //        rightDiceNumber = rightDiceNumber - 1
         
         
         // the above line of code can also be written using the shorthand operator
-        rightDiceNumber -= 1
+//        rightDiceNumber -= 1
+        
+        // the code below is to use the random() method from the Int class for getting a random number between 0 and
+        // 5 both inclusive
+        leftDiceNumber = Int.random(in: 0...5)   // here three dots specify that the random number will includex
+        // 0 and 5 as well
+        
+        // the below line of code is for debugging purpose
+        print("The number on left dice is: \(leftDiceNumber)")
+        
+        // the code below is to use the random() method from the Int class for getting a random number between 0 and
+        // 5 both inclusive
+        rightDiceNumber =  Int.random(in: 0...5) // here three dots specify that the random number will includex
+        // 0 and 5 as well
+        
+        // the below line of code is for debugging purpose
+        print("The number on the right dice is: \(rightDiceNumber)")
         
     }
     
